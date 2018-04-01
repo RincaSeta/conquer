@@ -1,3 +1,101 @@
-* {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+
+html{
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+.container:after,
+.container:before,
+.row:after,
+.row:before{
+	content: "";
+	display: table;
+}
+
+.container:after,
+.row:after,
+.clearfix{
+	clear: both;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+	border: 1px solid black;
+	width: 100%;
+	height: auto;
+}
+
+[class*='col-']{
+    width: 100%;
+    float: left;
+    min-height: 1px;
+}
+
+.left{float: left}
+.right{float: right}
+
+.displayNone{
+	display: none;
+}
+
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**­/
+      MOBILE DEVICE
+/**▬▬▬▬ஜ۩۞۩ஜ▬▬­­­­­­­­­▬▬▬**/
+@media only screen and (min-width: 320px){
+	.col-xs-1{width: 8.33333%;}
+	.col-xs-2{width: 16.66667%;}
+	.col-xs-3{width: 25%;}
+	.col-xs-4{width: 33.33333%;}
+	.col-xs-5{width: 41.66667%;}
+	.col-xs-6{width: 50%;}
+	.col-xs-7{width: 58.33333%;}
+	.col-xs-8{width: 66.66667%;}
+	.col-xs-9{width: 75%;}
+	.col-xs-10{width: 83.33333%;}
+	.col-xs-11{width: 91.66667%;}
+  .col-xs-12{width: 100%;}
+
+  /*****************
+  *   NAVIGATION   *
+  *****************/
+  nav{
+    border: 1px solid red;
+    background-color: #383E4C;
+    display: block;
+  }
+
+  nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+  }
+
+  nav li{
+    border: 1px solid #999;
+    margin: 0 10px;
+  }
+
+  nav li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 13px;
+  }
+
+  nav li a:hover,
+  nav li a:focus{
+    background-color: #49505F;
+  }
 }
